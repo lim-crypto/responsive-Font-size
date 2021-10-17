@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <title>Responsive font-size</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+  <h1 id="h1">Responsive Font size  h1 = <span id="h1FontSize" ></span></h1> 
+  <p id="p">Resize the screen to see the Font size of p = <span id="pFontSize"></span>
+    <br>
+    minimum of 14px (at a 320px viewport) to a maximum of 18px (at a 1200px viewport). 
+  </p>
+  <p id="custom-size">Custom font size = <span id="customFontSize"></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, commodi!</p>
+ 
+</div>
+<script>
+  //  to see the changes in font size every 3 milliseconds
+setInterval(() => {
+    var h1= document.getElementById('h1');
+    var h1FontSize = window.getComputedStyle(h1, null).getPropertyValue('font-size');
+    var Size = document.getElementById('h1FontSize');
+    Size.innerText = h1FontSize;
+
+    var p = document.getElementById('p');
+    var fontSize = window.getComputedStyle(p, null).getPropertyValue('font-size');
+    var pSize = document.getElementById('pFontSize');
+    pSize.innerText = fontSize;
+
+    var c = document.getElementById('custom-size');
+    var cFontSize = window.getComputedStyle(c, null).getPropertyValue('font-size');
+    var cSize = document.getElementById('customFontSize');
+    cSize.innerText = cFontSize;
+}, 300);
+
+
+</script>
+</body>
+
+</html>

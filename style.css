@@ -1,0 +1,65 @@
+.container{
+    width: 85%;
+    margin: auto;
+} 
+/*  you can adjust the min-max font size if you want */
+ 
+html {
+    /* minimum font size */ 
+  /* font-size: 16px;  */
+  font-size: 14px;  
+} 
+  @media  (min-width: 320px) {
+  html { 
+      /* responsive font size */
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    /* font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320))); */
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+  } 
+} 
+@media   (min-width: 1200px) {
+  html {
+      /* maximum font size */
+    /* font-size: 22px; */
+    font-size: 18px;
+
+  }
+}  
+ 
+/* you can resize the font size using rem and still responsive ;  do not use px */
+ 
+/* custom font size */
+#custom-size{
+    font-size: 1.5rem; 
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/*  option 2  ;) hahaha */
+/* html{
+      font-size: calc(0.7rem + 1vmin);   
+} */ 
+ 
